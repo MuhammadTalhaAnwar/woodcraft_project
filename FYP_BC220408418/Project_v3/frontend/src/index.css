@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #10B981; /* A nice, premium light/emerald green */
+  --color-accent: #3B82F6; /* Changed accent to blue to match the fresh green vibe */
+  --color-background: #F8FAFC; /* Clean, crisp, white-ish background */
+  --color-text: #1F1F1F;
+  --color-success: #16A34A;
+  --color-danger: #DC2626;
+  --color-surface: #FFFFFF; /* Pure white cards */
+  --color-border: #E2E8F0;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text font-sans antialiased;
+  }
+}
+
+/* Custom scrollbar for woody theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/30 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/50;
+}
